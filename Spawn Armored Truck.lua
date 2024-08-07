@@ -16,12 +16,10 @@ function OnStart()
     road_coords = GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER_PED_ID(), 0.0, randomFloatInRange(5.0, 10.0), 0)
     truck = CreatePoolVehicle(GET_HASH_KEY(model), road_coords.x, road_coords.y, road_coords.z, GET_ENTITY_HEADING(PLAYER_PED_ID()))
     if truck then
-        print("Created truck")
         SET_VEHICLE_ENGINE_ON(truck, true, true, false)
     end
     driver = CreatePoolPed(4, GET_HASH_KEY(driver_model), road_coords.x+5.0, road_coords.y, road_coords.z, GET_ENTITY_HEADING(PLAYER_PED_ID()))
     if driver then
-        print("Created driver")
         SET_PED_RANDOM_COMPONENT_VARIATION(truck, 0)
     end
     
