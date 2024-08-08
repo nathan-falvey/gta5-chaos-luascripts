@@ -1,6 +1,6 @@
 EffectInfo = { -- ScriptInfo for mod version < 2.0
     Name = "Do You Want A Taco????",
-    EffectId = "veh_spawntacotrucls", -- ScriptId for mod version < 2.0
+    EffectId = "veh_spawntacotrucks", -- ScriptId for mod version < 2.0
     TimedType = "None",
 }
 
