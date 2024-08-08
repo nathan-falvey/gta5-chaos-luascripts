@@ -2,20 +2,17 @@ EffectInfo = { -- ScriptInfo for mod version < 2.0
     Name = "POV: You're a blind person",
     EffectId = "player_isblind", -- ScriptId for mod version < 2.0
     TimedType = "Normal",
+    IncompatibleIds = {
+        "player_rgboverlay"
+    }
 }
 
 function OnStart()
 end
 
 function OnStop()
-    CLEAR_TIMECYCLE_MODIFIER()
 end
 
 function OnTick()
-    if GET_TIMECYCLE_TRANSITION_MODIFIER_INDEX() == -1 then
-    SET_TRANSITION_TIMECYCLE_MODIFIER("glasses_blackout", 10)
-    end
-    DISABLE_CONTROL_ACTION(0, 199, true)
-	DISABLE_CONTROL_ACTION(0, 200, true)
-    HIDE_HUD_AND_RADAR_THIS_FRAME()
+    DRAW_RECT(0.5, 0.5, 1.0, 1.0, 0, 0, 0, 255)
 end
