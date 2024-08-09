@@ -2,6 +2,7 @@ EffectInfo = { -- ScriptInfo for mod version < 2.0
     Name = "Buggy Interface",
     EffectId = "misc_buggyinterface", -- ScriptId for mod version < 2.0
     TimedType = "Normal",
+    IsMeta = true,
 }
 
 function OnStart()
