@@ -1,6 +1,6 @@
 EffectInfo = { -- ScriptInfo for mod version < 2.0
     Name = "Spawn Jim Pickens",
-    EffectId = "ped_spawnjim", -- ScriptId for mod version < 2.0
+    EffectId = "peds_spawnjim", -- ScriptId for mod version < 2.0
     TimedType = "None",
 }
 
@@ -17,7 +17,7 @@ function OnStart()
     SET_RELATIONSHIP_BETWEEN_GROUPS(5, rel_group, FCIV_GROUP)
 
     ped = CreatePoolPed(4, GET_HASH_KEY("a_m_m_golfer_01"), playerPos.x, playerPos.y, playerPos.z, GET_ENTITY_HEADING(PLAYER_PED_ID()))
-    
+    SET_PED_RELATIONSHIP_GROUP_HASH(ped, rel_group)
     if IS_PED_IN_ANY_VEHICLE(PLAYER_PED_ID(), true) then
         SET_PED_INTO_VEHICLE(ped, GET_VEHICLE_PED_IS_IN(PLAYER_PED_ID(), false), -2)
     end
@@ -33,6 +33,7 @@ function OnStart()
 
     GIVE_WEAPON_TO_PED(ped, GET_HASH_KEY("weapon_machete"), 9000, false, true)
     SET_CURRENT_PED_WEAPON(ped, GET_HASH_KEY("weapon_machete"),true)
+    SET_ENTITY_MAX_HEALTH(ped, 1500)
     SET_ENTITY_HEALTH(ped, 1500, 0, 0)
 
     TASK_COMBAT_PED(ped, PLAYER_PED_ID(), 0, 16)
