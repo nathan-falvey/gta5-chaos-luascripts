@@ -37,12 +37,6 @@ function OnStart()
 
     SET_PED_COMBAT_ATTRIBUTES(michael, 5, true)
 	SET_PED_COMBAT_ATTRIBUTES(michael, 46, true)
-    SET_ENTITY_MAX_HEALTH(ped, 1500)
-    SET_ENTITY_HEALTH(ped, 1500, 0, 0)
-
-
-    SET_PED_COMBAT_ATTRIBUTES(michael, 5, true)
-	SET_PED_COMBAT_ATTRIBUTES(michael, 46, true)
     SET_ENTITY_MAX_HEALTH(michael, 1500)
     SET_ENTITY_HEALTH(michael, 1500, 0, 0)
     SET_PED_HEARING_RANGE(michael, 9999.0)
