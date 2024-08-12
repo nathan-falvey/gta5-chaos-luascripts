@@ -13,7 +13,7 @@ function OnStart()
         driver_model = "s_m_m_armoured_01"
     end
     player_coords = GET_ENTITY_COORDS(PLAYER_PED_ID(), true)
-    road_coords = road_coords = GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER_PED_ID(), 0.0, -25.0, 0)
+    road_coords = GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER_PED_ID(), 0.0, -25.0, 0)
     truck = CreatePoolVehicle(GET_HASH_KEY(model), road_coords.x, road_coords.y, road_coords.z, GET_ENTITY_HEADING(PLAYER_PED_ID()))
     if truck then
         SET_VEHICLE_ENGINE_ON(truck, true, true, false)
