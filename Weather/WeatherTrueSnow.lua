@@ -13,8 +13,8 @@ end
 
 function OnStop()
     SetSnowState(false)
-    ResetShader()
     CLEAR_TIMECYCLE_MODIFIER()
+    SET_WEATHER_TYPE_NOW("CLEAR")
 end
 
 function OnTick()
