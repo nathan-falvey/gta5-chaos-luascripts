@@ -25,7 +25,7 @@ function OnTick()
     SET_TIMECYCLE_MODIFIER_STRENGTH(0.6)
     for _, ped in ipairs(GetAllPeds()) do
         if ped ~= PLAYER_PED_ID() then
-            SET_PED_MOVEMENT_CLIPSET(ped, "move_f@injured", 1.0);
+            SET_PED_MOVEMENT_CLIPSET(ped, "move_f@injured", 1.0)
         end
     end
 end
