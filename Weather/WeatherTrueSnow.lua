@@ -12,6 +12,8 @@ EffectInfo = {
 
 function OnStart()
     REQUEST_CLIP_SET("move_f@injured")
+    snowyaseaHash = GET_HASH_KEY("asea2")
+    SetSurroundingPedsInVehicles(snowyaseaHash, 0)
 end
 
 function OnStop()

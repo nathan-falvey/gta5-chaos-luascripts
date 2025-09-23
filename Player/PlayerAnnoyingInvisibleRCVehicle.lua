@@ -1,6 +1,6 @@
 EffectInfo = { 
-    Name = "Spawn Annoying RC Vehicle",
-    EffectId = "player_annoyingrcvehicle",
+    Name = "Spawn Invisible Annoying RC Vehicle",
+    EffectId = "player_invisannoyingrcvehicle",
     TimedType = "None",
     EffectGroup = "None",
     EffectCategory = "None"
@@ -21,6 +21,7 @@ function OnStart()
     SET_ENTITY_LOAD_COLLISION_FLAG(driver, true, 1)
     SET_ENTITY_INVINCIBLE(driver, true, false)
     SET_ENTITY_ALPHA(driver, 0, 0)
+    SET_ENTITY_ALPHA(rc, 0, 0)
     SET_VEHICLE_IS_CONSIDERED_BY_PLAYER(vehicle, false)
     SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(vehicle, true)
     SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(driver, true)
