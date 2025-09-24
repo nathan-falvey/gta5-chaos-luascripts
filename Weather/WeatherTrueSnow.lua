@@ -5,7 +5,8 @@ EffectInfo = {
     EffectGroup = "_group_weatherchange",
     EffectCategory = "Shader",
     IncompatibleIds = {
-        "world_snow"
+        "world_snow",
+        "weather_canadian"
     }
 
 }
