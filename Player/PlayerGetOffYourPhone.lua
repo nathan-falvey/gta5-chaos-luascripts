@@ -11,6 +11,8 @@ function OnStart()
 end
 
 function OnStop()
+    if IS_MOBILE_PHONE_CALL_ONGOING() then return end
+    DESTROY_MOBILE_PHONE()
 end
 
 function OnTick()
