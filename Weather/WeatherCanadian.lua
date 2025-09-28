@@ -32,7 +32,7 @@ function OnTick()
             coords = GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(ped, 0, 0, 50)
 
             snowManProp = CreatePoolProp(snowManModelhash, coords.x, coords.y, coords.z, false)
-            SET_ENTITY_COLLISION(snowManProp, false, true)
+            SET_ENTITY_COLLISION(snowManProp, false, false)
             ATTACH_ENTITY_TO_ENTITY(snowManProp, ped, GET_PED_BONE_INDEX(ped, 0x0), 0, 0, 0, 0, 0, 0, false, false, false, false, 0, true)
 
             snowMen[ped] = true -- allows me to internally track which ped has a snowman attached to them to prevent spawning duplicates and causing a memory crash
