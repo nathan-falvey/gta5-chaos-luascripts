@@ -20,4 +20,6 @@ function OnTick()
             SET_TRAIN_SPEED(vehicle, 9999.0)
         end
     end
+    WAIT(750)
+
 end

@@ -3,7 +3,7 @@ EffectInfo = {
     EffectId = "vehs_derailtrains",
     TimedType = "Normal",
     EffectGroup = "_group_trafficspawner",
-    EffectCategory = "None"
+    EffectCategory = "None",
     IncompatibleIds = {
         "vehs_expresstrains",
     }
@@ -28,4 +28,5 @@ function OnTick()
             SET_RENDER_TRAIN_AS_DERAILED(vehicle, true)
         end
     end
+    WAIT(750)
 end
