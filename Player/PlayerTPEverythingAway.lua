@@ -36,6 +36,10 @@ function OnStart()
     end
     for _, ped in ipairs(GetAllPeds()) do
         if ped ~= playerPed then
+            if IS_PED_IN_ANY_VEHICLE(ped, false) then
+                TASK_LEAVE_VEHICLE(ped, GET_VEHICLE_PED_IS_IN(ped, false), 16)
+            end
+
             pedPos = GET_ENTITY_COORDS(ped, true)
             distance = VDIST2(playerPos.x, playerPos.y, playerPos.z, pedPos.x, pedPos.y, pedPos.z)
             if distance < 1000000 then -- 1000 units squared

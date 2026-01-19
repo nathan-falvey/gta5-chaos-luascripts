@@ -20,11 +20,20 @@ function OnStart()
     gunManModelHash = GET_HASH_KEY(gunManModel)
     hackerModelHash = GET_HASH_KEY(hackerModel)
 
-    gunMan = CreatePoolPed(0, gunManModelHash, bankLoc[1], bankLoc[2], bankLoc[3]+20, 0)
-    SET_PED_INTO_VEHICLE(gunMan, van, -2)
-    
-    hackerMan = CreatePoolPed(0, hackerModelHash, bankLoc[1], bankLoc[2], bankLoc[3]+20, 0)
-    SET_PED_INTO_VEHICLE(hackerMan, van, -2)
+    models = {
+        gunManModelHash,
+        hackerModelHash
+    }
+    for _, model in ipairs(models) do
+        REQUEST_MODEL(model)
+        while not HAS_MODEL_LOADED(model) do
+            WAIT(50)
+        end
+
+        ped = CreatePoolPed(0, model, bankLoc[1], bankLoc[2], bankLoc[3]+20, 0)
+        SET_PED_INTO_VEHICLE(ped, van, -2)
+    end 
+
 
 
     SET_PED_INTO_VEHICLE(PLAYER_PED_ID(), van, -1)

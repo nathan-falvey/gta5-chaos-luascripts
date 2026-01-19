@@ -19,6 +19,11 @@ function OnStart()
 end
 
 function OnStop()
+    for _, object in ipairs(GetAllProps()) do
+        if GET_ENTITY_MODEL(object) == snowManModelhash then
+            DELETE_ENTITY(Holder(object))
+        end
+    end
     SetSnowState(false)
     USE_SNOW_FOOT_VFX_WHEN_UNSHELTERED(false)
 end
@@ -39,4 +44,6 @@ function OnTick()
         end
     end
     USE_SNOW_FOOT_VFX_WHEN_UNSHELTERED(true)
+
+
 end

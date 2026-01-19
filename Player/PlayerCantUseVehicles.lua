@@ -28,4 +28,6 @@ function OnTick()
         playerVeh = GET_VEHICLE_PED_IS_USING(playerPed)
         TASK_LEAVE_VEHICLE(playerPed, playerVeh, 16)
     end
+
+    WAIT(750)
 end

@@ -31,15 +31,19 @@ end
 
 -- Called every game tick while the effect is active
 darkness_value = 0.0
+start = GetTickCount()
 function OnTick()
     playerPed = PLAYER_PED_ID()
     if not DOES_ENTITY_EXIST(playerPed) or IS_PLAYER_SWITCH_IN_PROGRESS() or IS_PED_DEAD_OR_DYING(playerPed,0) then return end
     DRAW_RECT(0.5, 0.5, 1.0, 1.0, 0, 0, 0, darkness_value)
-    darkness_value = darkness_value + 1
+    local elapsed = (GetTickCount() - start) / 1000.0
+    if elapsed > 1 then
+        darkness_value = darkness_value + 1
+        start = GetTickCount()
+    end
     if darkness_value > 255.0 then
         darkness_value = 255.0
     end
-    WAIT(750)
 end
 
 -- Add custom helper functions below.

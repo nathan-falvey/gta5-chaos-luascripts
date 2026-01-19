@@ -3,7 +3,7 @@ EffectInfo = {
     EffectId = "weather_snowstorm",
     TimedType = "Normal",
     EffectGroup = "_group_weatherchange",
-    EffectCategory = "Shader",
+    EffectCategory = "None",
     IncompatibleIds = {
         "world_snow",
         "weather_canadian"
