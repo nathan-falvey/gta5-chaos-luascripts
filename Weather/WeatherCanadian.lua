@@ -45,5 +45,5 @@ function OnTick()
     end
     USE_SNOW_FOOT_VFX_WHEN_UNSHELTERED(true)
 
-
+    
 end

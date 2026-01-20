@@ -6,8 +6,7 @@ EffectInfo = { -- ScriptInfo for mod version < 2.0
     Name = "Back To Black", -- Display name of the effect
     EffectId = "screen_backtoblack", -- ScriptId for mod version < 2.0, must be unique
     Description = "A short one-line description of what this effect does.",
-    TimedType = "Custom", -- None, Normal, Short, Permanent, or "Custom"
-    CustomTime = 340, -- (seconds) only if TimedType = "Custom"
+    TimedType = "Normal", -- None, Normal, Short, Permanent, or "Custom"
     WeightMultiplier = 1, -- Relative probability of being chosen
     HideRealNameOnStart = false, -- true to hide the effect's real name when it starts
     EffectCategory = "Shader", -- Optional category
@@ -33,6 +32,7 @@ end
 darkness_value = 0.0
 start = GetTickCount()
 function OnTick()
+    print(start)
     playerPed = PLAYER_PED_ID()
     if not DOES_ENTITY_EXIST(playerPed) or IS_PLAYER_SWITCH_IN_PROGRESS() or IS_PED_DEAD_OR_DYING(playerPed,0) then return end
     DRAW_RECT(0.5, 0.5, 1.0, 1.0, 0, 0, 0, darkness_value)
