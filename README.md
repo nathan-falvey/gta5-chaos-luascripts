@@ -31,7 +31,6 @@ This project is a hands-on exercise in game modding and logic design. Through th
 
 ---
 
----
 ### Effect Template
 * An effect template can be found at [this repo](https://gitea.nathan-falvey.synology.me/Templates/gta5-chaos-luascript-template).
 * [Raw Template Code](https://gitea.nathan-falvey.synology.me/Templates/gta5-chaos-luascript-template/raw/branch/main/effect_template.lua), if needed.
